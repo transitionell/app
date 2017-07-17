@@ -33,6 +33,7 @@ app.set('view engine', 'pug');								// use pug to render views
 app.use(bodyParser.json());									// Parsers for POST data
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'dist'))); 		// Point static path to dist
+app.set('views', path.join(__dirname, '/client'));			// Point views dir to NG client dir
 
 
 
