@@ -6,6 +6,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:watch": "ng build -w",
+    "serve": "node server.js",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,7 +23,9 @@
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
+    "body-parser": "^1.17.2",
     "core-js": "^2.4.1",
+    "express": "^4.15.3",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
