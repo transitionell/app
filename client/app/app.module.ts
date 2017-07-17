@@ -3,12 +3,12 @@ import { BrowserModule } 		from '@angular/platform-browser';
 import { NgModule } 			from '@angular/core';
 import { RouterModule }			from '@angular/router';
 
-// Project modules
-import { AppComponent } 		from './app.component';
-import { FileUploadComponent }	from '../file-upload/file-upload.component';
-
 // Project routes
 import { AppRoutingModule }     from './app-routing.module';
+
+// Project modules
+import { AppComponent } 		from './app.component';
+import { FileUploadComponent }	from './file-upload/file-upload.component';
 import { MindMapComponent } 	from './mind-map/mind-map.component';
 
 
