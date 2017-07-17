@@ -16,9 +16,7 @@ const express 	 = require('express'),
 	  bodyParser = require('body-parser'),
 	  morgan     = require('morgan'),
 	  path 		 = require('path'),
-	  fs 		 = require('fs'),
-	  multer  	 = require('multer'),
-	  upload 	 = multer({ dest: 'public/uploads/' })
+	  fs 		 = require('fs')
 ;
 
 
@@ -42,7 +40,7 @@ app.set('views', path.join(__dirname, '/client'));			// Point views dir to NG cl
  **/
 app.use('/api', api);										// Set our api routes
 app.get('*', (req, res) => {								// Other routes defer to Angular's routing module
-	res.sendFile(path.join(__dirname, 'dist/index.html'));	
+	res.sendFile(path.join(__dirname, 'dist/index.html'));
 });
 
 
