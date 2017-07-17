@@ -1,22 +1,22 @@
-import { 
-	BrowserModule 
-} 							from '@angular/platform-browser';
-import { 
-	NgModule 
-} 							from '@angular/core';
+// Angular modules
+import { BrowserModule } 		from '@angular/platform-browser';
+import { NgModule } 			from '@angular/core';
+import { RouterModule }			from '@angular/router';
 
-import { 
-	AppComponent 
-} 							from './app.component';
-import { 
-	FileUploadComponent 
-}							from '../file-upload/file-upload.component';
+// Project modules
+import { AppComponent } 		from './app.component';
+import { FileUploadComponent }	from '../file-upload/file-upload.component';
+
+// Project routes
+import { AppRoutingModule }     from './app-routing.module';
+import { MindMapComponent } 	from './mind-map/mind-map.component';
 
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		FileUploadComponent
+		FileUploadComponent,
+		MindMapComponent
 	],
 	imports: [
 		BrowserModule
