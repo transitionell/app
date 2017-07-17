@@ -50,13 +50,13 @@ router
 			
 
 			console.log(
-				'file is: ', 
+				'multer config is: ', 
 				JSON.stringify(req.file,null,4),
 				'\nfile path: ',
 				req.file.path
 			);
 
-			//var filePath = path.join(
+			//let filePath = path.join(
 			//	__dirname,
 			//	req.file.path
 			//)
@@ -69,36 +69,11 @@ router
 			)
 
 			/* get text from image */
-			var config = {
+			let config = {
 				projectId: 'transition-ell',
 				keyFilename: 'server/_secrets/TransitionELL-f43d0dfba03a.json'
 			};
-			var client = require('@google-cloud/vision')(config);
-			/*
-			return client.detectText(
-				filePath+'.jpg', 
-				function(err, results) {
-					if (err) {
-						console.error(
-							JSON.stringify(err,null,4)
-						);
-						return res.status(500).send(err);
-					}
-
-					console.log(
-						'data fetch from google: ',
-						JSON.stringify(
-							results[0],
-							null,
-							4
-						)
-					)
-					res.render('mapping', { data: results[0] });
-					//return res.json(results[0]);
-				}
-			);
-			*/
-
+			let client = require('@google-cloud/vision')(config);
 			client
 				.readDocument(req.file.path+'.jpg')
 				.then(
@@ -118,22 +93,6 @@ router
 					}
 				)
 			;
-
-
-
-			/* return text to client in JSON 
-			//res.render('mapping', { data: results[0] });
-			return res.json(
-						{
-							'results':
-							[
-								{'id':1},
-								{'id':2}
-							]
-						}
-					)
-			;
-			*/
 		}
 	)
 ;
