@@ -1,4 +1,4 @@
-![alt text](https://github.com/transitionell/app/tree/master/docs/demdi-cover_image.png "Demdi - Making the abstract concrete")
+![alt text](https://github.com/transitionell/app/blob/master/docs/demdi-cover_image.png "Demdi - Making the abstract concrete")
 
 
 
