@@ -1,6 +1,10 @@
-# Client
+![alt text](https://github.com/transitionell/app/tree/master/docs/demdi-cover_image.png "Demdi - Making the abstract concrete")
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+
+
+# About Demdi
+
+Comming Soon
 
 
 
