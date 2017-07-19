@@ -9,7 +9,7 @@ const express 		= require('express'),
 	  uploadDir		= path.join(__dirname,'../../dist/uploads/'),
 	  upload 		= multer({ dest: uploadDir }),
 	  keyFilePath 	= path.join(__dirname,'../_secrets/TransitionELL-f43d0dfba03a.json'),
-	  keyFile 		= fs.readFile(keyFilePath, data=> data);
+	  keyFile 		= fs.readFile(keyFilePath, data=> data)
 ;
 
 
