@@ -1,7 +1,10 @@
 // Angular modules
 import { BrowserModule } 		from '@angular/platform-browser';
 import { NgModule } 			from '@angular/core';
-import { RouterModule }			from '@angular/router';
+import { 
+	RouterModule,
+	Routes 
+}								from '@angular/router';
 
 // Project routes
 import { AppRoutingModule }     from './app-routing.module';
@@ -19,7 +22,17 @@ import { MindMapComponent } 	from './mind-map/mind-map.component';
 		MindMapComponent
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		RouterModule.forRoot([
+			{
+				path: 'upload',
+				component: FileUploadComponent
+			},
+			{
+				path: 'map',
+				component: MindMapComponent
+			},
+		])
 	],
 	providers: [
 
