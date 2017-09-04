@@ -1,8 +1,7 @@
-/**
- * 	Get dependencies
- **/
-const express 		= require('express'),
-	  router 		= express.Router(),
+const express = require('express');
+const router = express.Router();
+const mongoose = require('mongoose');
+const Student = require('../models/student'),
 	  fs			= require('fs'),
 	  path 			= require('path'),
 	  multer  		= require('multer'),
@@ -12,25 +11,88 @@ const express 		= require('express'),
 	  keyFile 		= fs.readFile(keyFilePath, data=> data)
 ;
 
+const db = "mongodb://demdi:ell4u@ds137207.mlab.com:37207/demdi-students"
+mongoose.Promise = global.Promise;
+mongoose.connect(db, function(err){
+// mongoose.connect('mongodb://demdi:ell4u@ds137207.mlab.com:37207/demdi-students', function(err){
+	if(err){
+		console.error("Error! " + err);
+	}
+});
 
+router.get('/students', function(req, res){
+	console.log('Get request for all students');
+	Student.find({})
+	.exec(function(err, students){
+		if (err){
+			console.log("Error retrieving students");
+		}else {
+			res.json(students);
+		}
+	});
+});
 
-/**
- * 	define api routes & attach modules 
- **/
-router
-	.get(
-		'/', 
-		(req, res) => {
-			res.send('api works');
+router.get('/students/:id', function(req, res){
+	console.log('Get request for a single student');
+	Student.findById(req.params.id)
+	.exec(function(err, student){
+		if (err){
+			console.log("Error retrieving student");
+		}else {
+			res.json(student);
 		}
-	)
-	.get(
-		'/pug', 
-		function (req, res) {
-			res.render('pug', { title: 'Hey', message: 'Hello there!' })
+	});
+});
+
+router.post('/student', function(req, res){
+	console.log('Add a student');
+	var newStudent = new Student();
+	newStudent.name = req.body.name;
+	newStudent.primaryLanguage = req.body.primaryLanguage;
+	newStudent.classNumber = req.body.classNumber;
+	newStudent.save(function (err, insertedStudent) {
+		if(err){
+			console.log('Error saving student');
+		}else {
+			res.json(insertedStudent)
 		}
-	)
-	.post(
+	});
+});
+
+router.put('/student/:id', function(req, res){
+	console.log('Update a student');
+	Student.findByIdAndUpdate(req.params.id,
+	{
+		$set: {
+				name: req.body.name, 
+				primaryLanguage: req.body.primaryLanguage,
+				classNumber: req.body.classNumber
+			  }
+	},
+	{
+		new: true
+	},
+	function(err, updatedStudent){
+		if(err){
+			res.send('Error updating student');
+		}else {
+			res.json(updatedStudent);
+		}
+	});
+});
+
+router.delete('/student/:id', function(req, res){
+	console.log('Deleting a student');
+	Student.findByIdAndRemove(req.params.id, function(err, deletedStudent){
+		if(err){
+			res.send('Error deleting studt')
+		}else{
+			res.json(deletedStudent);
+		}
+	});
+});
+
+router.post(
 		'/detect-text',
 		upload.single('file'),
 		function(req, res) {
@@ -79,11 +141,28 @@ router
 				.then(
 					(results) => {
 						const fullTextAnnotation = results[1].responses[0].fullTextAnnotation;
+						var text = fullTextAnnotation.text;
 						console.log(fullTextAnnotation.text);
 
 						// send render text to client
-						return res.json(results)
+						//return res.json(results)
+						//return res.json({text: fullTextAnnotation.text})
+						let config2 = {
+							projectId: 'ell-edu',
+							keyFilename: 'server/_secrets/ELL_Edu-4ee6bd69f677.json'
+						};
 
+						let translateClient = require('@google-cloud/translate')(config2);
+						translateClient
+							.translate('photosynthesis', {from: 'en', to: 'es'})
+							.then(
+								(data) =>{
+									text = text.replace(/photosynthesis/gi, 'photosynthesis |' + data[0] +'|');
+									console.log("\ndata: " + data[0]);
+									return res.json({translation: text});
+								}
+							)
+						;
 					}
 				)
 				.catch(
@@ -97,19 +176,4 @@ router
 	)
 ;
 
-
-
-
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-

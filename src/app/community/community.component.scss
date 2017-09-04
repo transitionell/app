@@ -1,0 +1,32 @@
+$primary-blue: rgb(71, 97, 177);
+$secondary-blue: rgba(131, 148, 200, 1);
+$primary-green: rgb(34, 180, 172);
+$secondary-green: rgba(119, 206, 201, 1);
+$primary-orange: rgba(136, 104, 22, 1);
+$primary-grey: rgb(239, 239, 239);
+
+#header, #create-post {
+	text-align: center;
+	color: #fff;
+}
+h1 {
+	padding-top: 200px;
+	font-size: 5em;
+}
+
+.btn-primary {
+	margin-top: 25px;
+}
+
+#about {
+	padding: 50px;
+}
+
+#create-post {
+	padding-top: 100px;
+
+}
+
+#step2 {
+	padding-bottom: 100px;
+}

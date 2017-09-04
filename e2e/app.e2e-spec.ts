@@ -1,14 +1,14 @@
-import { ClientPage } from './app.po';
+import { AngularBootstrapMdQuickstartPage } from './app.po';
 
-describe('client App', () => {
-  let page: ClientPage;
+describe('angular-bootstrap-md-quickstart App', () => {
+  let page: AngularBootstrapMdQuickstartPage;
 
   beforeEach(() => {
-    page = new ClientPage();
+    page = new AngularBootstrapMdQuickstartPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
