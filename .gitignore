@@ -6,7 +6,7 @@
 /out-tsc
 
 # dependencies
-node_modules
+/node_modules
 
 # IDEs and editors
 /.idea
@@ -41,5 +41,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-* Hidden project files
-_*
+# Hidden Files
+/server/_secrets
+
+.env

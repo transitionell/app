@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary-blue: rgb(71, 97, 177);
+$secondary-blue: rgba(131, 148, 200, 1);
+$primary-green: rgb(34, 180, 172);
+$secondary-green: rgba(119, 206, 201, 1);
+$primary-orange: rgba(136, 104, 22, 1);
+$primary-grey: rgb(239, 239, 239);
+
+html {
+	overflow-x: hidden;
+}
+
+body, html {
+// 	background: $primary-grey; /* For browsers that do not support gradients */
+//     background: -webkit-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* Safari 5.1-6.0 */
+//     background: -o-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* For Opera 11.6 to 12.0 */
+//     background: -moz-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* For Firefox 3.6 to 15 */
+//     background: radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%);
+ 	height: 100%;
+  }
+
+.pg-content {
+	height: 100%;
+}
+
+
+.btn {
+	background-color: $primary-blue;
+	color: #000 !important;
+	border-radius: 25px;
+}
+
+.container-fluid {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+// *{border: 1px solid red;}
+// *{padding: 0;
+// margin: 0;}
+
+.jumbotron {
+	text-align:center;
+}

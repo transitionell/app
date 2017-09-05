@@ -1,0 +1,40 @@
+<div>
+	<form>
+		<div *ngIf="editName" class="form-group">
+			<input 
+				type="input" 
+				class="form-control" 
+				name="name" 
+				required placeholder="Student Name"
+				[(ngModel)]="student.name">
+		</div>
+		<h3 *ngIf="!editName" (click)="onNameClick()">{{student.name}}</h3>
+		
+		<div class="form-group">
+			<input 
+				type="input" 
+				class="form-control" 
+				name="classNumber" 
+				required placeholder="Class Number"
+				[(ngModel)]="student.classNumber">
+		</div>
+		<div class="form-group">
+			<input 
+				type="input" 
+				class="form-control" 
+				name="primaryLanguage" 
+				required placeholder="Primary Language"
+				[(ngModel)]="student.primaryLanguage">
+		</div>
+		<button 
+			type="button" 
+			(click)="updateStudent()" 
+			class="btn btn-primary">Update
+		</button>
+		<button 
+			type="button" 
+			(click)="deleteStudent()" 
+			class="btn btn-primary">Delete
+		</button>
+	</form>
+</div>

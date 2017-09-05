@@ -1,11 +1,11 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "client"
+    "name": "quickstart-angular2"
   },
   "apps": [
     {
-      "root": "client",
+      "root": "src",
       "outDir": "dist",
       "assets": [
         "assets",
@@ -19,9 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+        "../node_modules/angular-bootstrap-md/scss/mdb.scss",
+        "./styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/web-animations-js/web-animations.min.js",
+        "../node_modules/chart.js/dist/chart.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -36,10 +42,10 @@
   },
   "lint": [
     {
-      "project": "client/tsconfig.app.json"
+      "project": "src/tsconfig.app.json"
     },
     {
-      "project": "client/tsconfig.spec.json"
+      "project": "src/tsconfig.spec.json"
     },
     {
       "project": "e2e/tsconfig.e2e.json"
@@ -51,7 +57,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

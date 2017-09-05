@@ -1,0 +1,39 @@
+<div class="row">
+  <div *ngIf="!hidenewStudent">
+    <h2>New Student</h2>
+    <form #form="ngForm" (ngSubmit)="onSubmitAddStudent(form.value)" class="well">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" required name="name" ngModel>
+      </div>
+      <div class="form-group">
+        <label>Class Number</label>
+        <input type="text" class="form-control" required name="classNumber" ngModel>
+      </div>
+      <div class="form-group">
+        <label>Primary Language</label>
+        <input type="text" class="form-control" required name="primaryLanguage" ngModel>
+      </div>
+      <button type="submit" class="btn btn-success">Save</button>
+    </form>
+  </div>
+  <student-detail
+    (updateStudentEvent)="onUpdateStudentEvent($event)"
+    (deleteStudentEvent)="onDeleteStudentEvent($event)"
+    *ngIf="selectedStudent && hidenewStudent" 
+    [student]="selectedStudent">
+  </student-detail>
+</div>
+<div>
+  <button 
+    (click)="newStudent()"
+    style="margin-bottom: 2px;" 
+    type="button" 
+    class="btn btn-primary ripple-radius">
+    + New Student   
+  </button>
+  <student-list 
+    (SelectStudent)="onSelectStudent($event)" 
+    [students]="students">
+  </student-list>
+</div>

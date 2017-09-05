@@ -1,0 +1,67 @@
+$primary-blue: rgb(71, 97, 177);
+$secondary-blue: rgba(131, 148, 200, 1);
+$primary-green: rgb(34, 180, 172);
+$secondary-green: rgba(119, 206, 201, 1);
+$primary-orange: rgba(136, 104, 22, 1);
+$primary-grey: rgb(239, 239, 239);
+.block-white {
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.form-header {
+    background: $primary-green !important;
+}
+.btn:hover {
+    background: $secondary-green !important;
+}
+.card {
+    background: $primary-grey;
+}
+.file-btns {
+    padding-top: 80.9px;
+}
+.translation-card {
+    padding: 15px;
+}
+// .btn {
+//  color: #ffd700 !important;
+//  background: rgba(71, 97, 177, 0.8);
+//     display: inline-block;
+//     padding: 6px 12px;
+//     margin-bottom: 0;
+//     font-size: 14px;
+//     font-weight: normal;
+//     line-height: 1.42857143;
+//     text-align: center;
+//     white-space: nowrap;
+//     vertical-align: middle;
+//     cursor: pointer;
+//     background-image: none;
+//     border: 1px solid transparent;
+//     border-radius: 4px;
+// }
+//  .fileinput-button {
+//     position: relative;
+//     overflow: hidden;
+// }
+// /*Also*/
+//  .fileinput-button input {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     margin: 0;
+//     opacity: 0;
+//     -ms-filter:'alpha(opacity=0)';
+//     font-size: 200px;
+//     direction: ltr;
+//     cursor: pointer;
+// }
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

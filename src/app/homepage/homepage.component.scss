@@ -1,0 +1,43 @@
+$primary-blue: rgb(71, 97, 177);
+$secondary-blue: rgba(131, 148, 200, 1);
+$primary-green: rgb(34, 180, 172);
+$secondary-green: rgba(119, 206, 201, 1);
+$primary-orange: rgba(136, 104, 22, 1);
+$primary-grey: rgb(239, 239, 239);
+
+
+#header {
+	color: $primary-grey !important;
+	height: 700px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: -webkit-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+					   url(../../assets/classroom2.jpg);
+	background-image: -o-linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+					   url(../../assets/classroom2.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+					   url(../../assets/classroom2.jpg);
+}
+
+html, body {
+	height: 100vh;
+}
+
+h1 {
+	font-size: 100px;
+	font-weight: bold;
+}
+
+h5 {
+	font-size: 48px;
+}
+
+.buttons {
+	text-align: center;
+}
+
+.text-btn {
+	color: #fff !important;
+	font-weight: bold;
+	background: rgba(71, 97, 177, 0.8) !important;
+}

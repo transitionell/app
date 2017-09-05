@@ -1,0 +1,45 @@
+$primary-blue: rgb(71, 97, 177);
+$secondary-blue: rgba(131, 148, 200, 1);
+$primary-green: rgb(34, 180, 172);
+$secondary-green: rgba(119, 206, 201, 1);
+$primary-orange: rgba(136, 104, 22, 1);
+$primary-grey: rgb(239, 239, 239);
+.bloc-white {
+		padding: 50px 0;
+		margin-top: 50px;
+		display: flex;
+ 	  	justify-content: center;
+ 	 	align-items: center;
+ //	   background: $primary-grey; /* For browsers that do not support gradients */
+ //    background: -webkit-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* Safari 5.1-6.0 */
+ //    background: -o-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* For Opera 11.6 to 12.0 */
+ //    background: -moz-radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%); /* For Firefox 3.6 to 15 */
+ //    background: radial-gradient($primary-grey 5%, $primary-blue 15%, $secondary-blue 60%);
+}
+
+.card {
+	// margin: 0 auto;
+	box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.16), 0 4px 20px 0 rgba(0, 0, 0, 0.12);
+}
+
+.modal-footer {
+	justify-content: center;
+	text-align: center;
+}
+
+.form-header {
+	background: $secondary-green !important;
+}
+
+.login {
+		background: $secondary-green !important;
+
+}
+
+// @media screen 
+//   and (min-device-width: 1200px) 
+//   and (max-device-width: 1600px) { 
+//   	.bloc-white {
+// 		padding: 100px 450px;
+// 	}
+// }

@@ -1,0 +1,92 @@
+<!-- <div class="container block-white">
+	<div class="row">
+
+	<div class="card col-sm-3">
+	    <div class="card-block">
+
+	        
+	        <div class="form-header purple darken-4">
+	            <h3><i class="fa fa-upload"></i> Upload File</h3>
+	        </div>
+			
+			<div class="file-btns">
+			<form 
+				#form="ngForm" (ngSubmit)="onGetTranslation(form.value)"
+			>
+			<span class="btn btn-primary fileinput-button">
+        	<span>Choose file</span>
+
+		    <input type="file" name="file">
+		    </span>
+		    <input type="submit" class="btn btn-primary" value="Upload">
+			</form>
+			
+			</div>
+
+	    </div>
+
+	</div>
+
+	
+
+	<div class="card card-body translation-card col-sm-8">
+	    <h4 class="card-title">Your translation</h4>
+	    <p class="card-text">{{data}}</p>
+	    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet tempus orci, mattis porttitor lorem malesuada quis. Vestibulum nec porttitor arcu. Vestibulum vitae congue orci. Quisque ante dui, scelerisque nec mattis non, imperdiet vitae lacus. Maecenas at urna dignissim, tempus tortor eget, lobortis nulla. Vivamus vel euismod nisi. Curabitur cursus, arcu rhoncus scelerisque tincidunt, enim lectus luctus ex, at pretium urna metus nec justo. Maecenas mollis elit et placerat lacinia. Morbi ac magna neque. Vestibulum euismod velit vitae augue ultricies semper.
+
+				method="POST"
+				action="/api/detect-text"
+				encType="multipart/form-data"
+
+		Pellentesque nec sem eu leo pharetra ultrices tempus at magna. Nullam sit amet metus nibh. Fusce aliquet turpis eu nibh tincidunt varius. Suspendisse lacinia libero nisl, vel faucibus diam imperdiet vel. Suspendisse laoreet sem leo, in hendrerit nisl sollicitudin at. Nulla sed ullamcorper ipsum. Sed quis urna sagittis urna efficitur rutrum quis non lacus. Sed ultricies libero auctor, dictum tortor at, blandit augue. Nulla facilisi. Nunc pulvinar, lorem at molestie fermentum, enim nunc lobortis nunc, ac ultricies ex nunc sit amet quam. Aliquam rutrum consectetur nulla, eu porttitor leo tristique fringilla.</p>
+	</div>
+	</div>
+</div> -->
+<div class="container block-white">
+	<div class="row">
+
+	<div class="card col-sm-3">
+	    <div class="card-block">
+
+	        
+	        <div class="form-header purple darken-4">
+	            <h3><i class="fa fa-upload"></i> Upload File</h3>
+	        </div>
+			
+			<div class="file-btns">
+			<!-- <form method="POST" action="myurl"> <span class="btn btn-primary fileinput-button"> 
+        	<span>Choose file</span>
+
+		    <input type="file" name="file">
+		    </span>
+		    <input type="submit" class="btn btn-primary">
+			</form> -->
+			<form
+					ref='upload' 
+					id='uploadForm'
+					action='/api/detect-text'
+					method='post'
+					encType="multipart/form-data"
+			>
+			<label for="file-upload" class="custom-file-upload">
+    		<i class="fa fa-cloud-upload"></i> Upload
+			</label>
+			<input id="file-upload" type="file"/>
+			<input type="submit" class="btn btn-primary" (click)="show()">
+			</form>
+			</div>
+
+			
+
+	    </div>
+
+	</div>
+
+	
+
+	<div class="card card-body translation-card col-sm-8 col-sm-offset-5">
+	    <h4 class="card-title">Your translation</h4>
+	    <p class="card-text">{{text}}</p>
+	</div>
+	</div>
+</div>
