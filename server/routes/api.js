@@ -69,9 +69,6 @@ router
 			)
 
 
-			// Debug
-			console.log('projectId: ',process.env.GCLOUD_PROJECT);
-
 			/* get text from image */
 			let config = {
 				projectId: process.env.GCLOUD_PROJECT,
