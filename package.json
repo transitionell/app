@@ -14,7 +14,8 @@
     "build:watch": "ng build -w",
     "deploy": "gcloud app deploy --project=transition-ell --verbosity=info",
     "serve": "node index.js",
-    "serve:prod": "gcloud app browse",
+    "open:dev": "open http://localhost:3000/",
+    "open:prod": "gcloud app browse",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
