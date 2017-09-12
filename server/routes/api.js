@@ -7,9 +7,7 @@ const express 		= require('express'),
 	  path 			= require('path'),
 	  multer  		= require('multer'),
 	  uploadDir		= path.join(__dirname,'../../dist/uploads/'),
-	  upload 		= multer({ dest: uploadDir }),
-	  keyFilePath 	= path.join(__dirname,'../_secrets/TransitionELL-f43d0dfba03a.json'),
-	  keyFile 		= fs.readFile(keyFilePath, data=> data)
+	  upload 		= multer({ dest: uploadDir })
 ;
 
 
@@ -56,14 +54,7 @@ router
 				req.file.path
 			);
 
-			//let filePath = path.join(
-			//	__dirname,
-			//	req.file.path
-			//)
-
 			fs.renameSync(
-				//filePath,
-				//filePath+'.jpg'
 				req.file.path,
 				req.file.path+'.jpg'
 			)
@@ -77,6 +68,12 @@ router
 					(results) => {
 						const fullTextAnnotation = results[1].responses[0].fullTextAnnotation;
 						console.log(fullTextAnnotation.text);
+
+
+						// delete image file
+						console.log('deleting image: ', req.file.path+'.jpg');
+						fs.unlinkSync(req.file.path+'.jpg');
+
 
 						// send render text to client
 						return res.json(results)
