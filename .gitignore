@@ -44,3 +44,4 @@ Thumbs.db
 * Hidden project files
 _*
 .env
+.credentials
