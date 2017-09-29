@@ -8,22 +8,22 @@
     "npm": "5.0.3"
   },
   "scripts": {
-    "ng": "ng",
-    "build": "ng build",
-    "build:watch": "ng build -w",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
+    "ng": "./node_modules/.bin/ng",
+    "build": "./node_modules/.bin/ng build",
+    "build:watch": "./node_modules/.bin/ng build -w",
+    "test": "./node_modules/.bin/ng test",
+    "lint": "./node_modules/.bin/ng lint",
+    "e2e": "./node_modules/.bin/ng e2e",
+    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/ng build -w\" \"./node_modules/.bin/firebase serve\"",
     
-    "deploy": "firebase deploy",
-    "deploy:hosting": "firebase deploy --only hosting",
-    "deploy:functions": "firebase deploy --only functions",
-    "deploy:database": "firebase deploy --only database",
-    "deploy:storage": "firebase deploy --only storage",
+    "deploy": "./node_modules/.bin/firebase deploy",
+    "deploy:hosting": "./node_modules/.bin/firebase deploy --only hosting",
+    "deploy:functions": "./node_modules/.bin/firebase deploy --only functions",
+    "deploy:database": "./node_modules/.bin/firebase deploy --only database",
+    "deploy:storage": "./node_modules/.bin/firebase deploy --only storage",
     "open:local": "open http://localhost:5000/",
-    "open:remote": "firebase open",
-    "start": "firebase serve",
-    "serve": "firebase serve"
+    "open:remote": "./node_modules/.bin/firebase open",
+    "serve": "./node_modules/.bin/firebase serve"
   },
   "private": true,
   "dependencies": {
