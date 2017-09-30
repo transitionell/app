@@ -14,15 +14,20 @@
     "test": "./node_modules/.bin/ng test",
     "lint": "./node_modules/.bin/ng lint",
     "e2e": "./node_modules/.bin/ng e2e",
+    "serve": "./node_modules/.bin/ng s -dev",
+    "serve:staging": "./node_modules/.bin/ng s -e staging",
+    "serve:prod": "./node_modules/.bin/ng s -prod",
+
     "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/ng build -w\" \"./node_modules/.bin/firebase serve\" --kill-others-on-fail",
+
+
     "deploy": "./node_modules/.bin/firebase deploy",
     "deploy:hosting": "./node_modules/.bin/firebase deploy --only hosting",
     "deploy:functions": "./node_modules/.bin/firebase deploy --only functions",
     "deploy:database": "./node_modules/.bin/firebase deploy --only database",
     "deploy:storage": "./node_modules/.bin/firebase deploy --only storage",
     "open:local": "open http://localhost:5000/",
-    "open:remote": "./node_modules/.bin/firebase open",
-    "serve": "./node_modules/.bin/firebase serve"
+    "open:remote": "./node_modules/.bin/firebase open"
   },
   "private": true,
   "dependencies": {
