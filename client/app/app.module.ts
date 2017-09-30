@@ -25,6 +25,9 @@ import {
 import { 
 	MindMapComponent 
 } 							from './mind-map/mind-map.component';
+import { 
+	VersionComponent 
+} 							from './version/version.component';
 
 
 
@@ -32,7 +35,8 @@ import {
 	declarations: [
 		AppComponent,
 		FileUploadComponent,
-		MindMapComponent
+		MindMapComponent,
+		VersionComponent
 	],
 	imports: [
 		BrowserModule,
