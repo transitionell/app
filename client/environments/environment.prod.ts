@@ -4,7 +4,14 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
+	
+	// Environment specs
+	envName: 'prod',
 	production: true,
 	staging: false,
-	envName: 'prod'
+
+	// Hotjar Analytics
+	hotjar: {
+		trackingId: 641491
+	}
 };
