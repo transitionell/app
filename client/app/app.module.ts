@@ -28,6 +28,9 @@ import {
 import { 
 	VersionComponent 
 } 							from './version/version.component';
+import { 
+	HotjarComponent 
+} 							from './analytics/hotjar.component';
 
 
 
@@ -36,7 +39,8 @@ import {
 		AppComponent,
 		FileUploadComponent,
 		MindMapComponent,
-		VersionComponent
+		VersionComponent,
+		HotjarComponent
 	],
 	imports: [
 		BrowserModule,
