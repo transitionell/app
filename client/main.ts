@@ -13,9 +13,30 @@ import {
 } 							from './environments/environment';
 
 
-
+// Do prod stuff
 if (environment.production) {
-  enableProdMode();
+	enableProdMode();
 }
 
+
+// Do staging stuff
+if (environment.staging) {
+
+}
+
+
+// Do prod stuff
+if (environment.development) {
+
+}
+
+
+// Bootstrap NG app
 platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+
+
+
+
+

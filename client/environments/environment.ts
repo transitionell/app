@@ -22,10 +22,11 @@ export const environment = {
 	envName: 'dev',
 	production: false,
 	staging: false,
+	development: true,
 
 	// Hotjar Analytics
 	hotjar: {
-		trackingId: 641484,
+		id: 641484,
 		function: hotjarTrackingFunc
 	}
 };

@@ -18,7 +18,6 @@
     "serve:staging": "./node_modules/.bin/ng s -e staging",
     "serve:prod": "./node_modules/.bin/ng s -prod",
 
-    "start": "./node_modules/.bin/concurrently \"./node_modules/.bin/ng build -w\" \"./node_modules/.bin/firebase serve\" --kill-others-on-fail",
 
 
     "deploy": "./node_modules/.bin/firebase deploy",
@@ -27,7 +26,8 @@
     "deploy:database": "./node_modules/.bin/firebase deploy --only database",
     "deploy:storage": "./node_modules/.bin/firebase deploy --only storage",
     "open:local": "open http://localhost:5000/",
-    "open:remote": "./node_modules/.bin/firebase open"
+    "open:remote": "./node_modules/.bin/firebase open",
+    "start": "./node_modules/.bin/firebase serve"
   },
   "private": true,
   "dependencies": {
