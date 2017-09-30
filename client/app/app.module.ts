@@ -1,18 +1,31 @@
 // Angular modules
-import { BrowserModule } 		from '@angular/platform-browser';
-import { NgModule } 			from '@angular/core';
+import { 
+	BrowserModule 
+} 							from '@angular/platform-browser';
+import { 
+	NgModule 
+} 							from '@angular/core';
 import { 
 	RouterModule,
 	Routes 
-}								from '@angular/router';
+}							from '@angular/router';
 
 // Project routes
-import { AppRoutingModule }     from './app-routing.module';
+import { 
+	AppRoutingModule 
+}     						from './app-routing.module';
 
-// Project modules
-import { AppComponent } 		from './app.component';
-import { FileUploadComponent }	from './file-upload/file-upload.component';
-import { MindMapComponent } 	from './mind-map/mind-map.component';
+// Project components
+import { 
+	AppComponent 
+} 							from './app.component';
+import { 
+	FileUploadComponent 
+}							from './file-upload/file-upload.component';
+import { 
+	MindMapComponent 
+} 							from './mind-map/mind-map.component';
+
 
 
 @NgModule({
