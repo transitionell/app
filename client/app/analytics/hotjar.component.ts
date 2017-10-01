@@ -19,7 +19,7 @@ import {
 export class HotjarComponent {
 
 
-	private hotjar: any;
+	hotjar: any;
 
 
 	constructor() {
