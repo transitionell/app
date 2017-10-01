@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "transition-ell-dev"
+    "default": "transition-ell-dev",
+    "staging": "transition-ell-staging",
+    "prod": "transition-ell"
   }
 }
