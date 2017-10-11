@@ -1,7 +1,0 @@
-{
-  "RESULT_TOPIC": "test-result-topic-name",
-  "RESULT_BUCKET": "trell-text",
-  "TRANSLATE_TOPIC": "test-translate-topic-name",
-  "TRANSLATE": true,
-  "TO_LANG": ["en", "fr", "es", "ja", "ru"]
-}
