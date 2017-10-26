@@ -39,4 +39,35 @@ jobs:
       #- run: yarn test
       - run: ng test
 
+      # deploy Develop branch
+      - deploy:
+        name: Deploy Develop to Firebase
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "develop" ]; then
+            ./node_modules/.bin/firebase use transition-ell-dev 
+            ./node_modules/.bin/firebase deploy --only hosting --token=$FIREBASE_DEPLOY_TOKEN
+          fi
+
+      # deploy Staging branch
+      - deploy:
+        name: Deploy Staging to Firebase
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "staging" ]; then
+            ./node_modules/.bin/firebase use transition-ell-staging 
+            ./node_modules/.bin/firebase deploy --only hosting --token=$FIREBASE_DEPLOY_TOKEN
+          fi
+
+      # deploy Master branch
+      - deploy:
+        name: Deploy Master to Firebase
+        command: |
+          if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            ./node_modules/.bin/firebase use transition-ell 
+            ./node_modules/.bin/firebase deploy --only hosting --token=$FIREBASE_DEPLOY_TOKEN
+          fi
+
+
+
+
+
 
